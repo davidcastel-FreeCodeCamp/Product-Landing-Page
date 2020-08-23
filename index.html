@@ -12,44 +12,82 @@
     <title>Product Landing Page</title>
 </head>
 
-<body>
+<body class="bg-info">
 
-    <!-- Header Container -->
-    <header id="header">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-md" id="nav-bar">
-            <!-- Navbar Brand -->
-            <a href="#" class="navbar-brand nav-link"><img src="" alt="" class="img-fluid" width="30" height="30"></a>
+    <main>
 
-            <!-- Collapse -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar-content">
-                <span class="navbar-toggler-icon"></span>
-            </button> <!-- End of Collapse -->
+        <!-- Header Container -->
+        <header id="header">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md bg-dark position-fixed w-100" id="nav-bar">
+                <!-- Navbar Brand -->
+                <a href="#header" class="navbar-brand nav-link"><img src="/nightway.jpg" alt="Image of city night"
+                        class="img-fluid" id="header-img" width="30" height="30"></a>
 
-            <!-- Nav-Links -->
-            <div class="collapse navbar-collapse mr-0" id="navbar-content">
-                <ul class="novbar-nav mr-automt-2 mt-lg-0">
-                    <li class="nav-item nav-link active"><a href="/" class="nav-link">Home</a></li>
-                    <li class="nav-item nav-link"><a href="/" class="nav-link">About</a></li>
-                    <li class="nav-item nav-link"><a href="/" class="nav-link">More Information</a></li>
-                    <li class="nav-item nav-link"><a href="/" class="nav-link">See more work</a></li>
-                </ul>
-            </div> <!-- End of Nav-Links -->
-        </nav> <!-- End of Navbar -->
-    </header> <!-- End of Header Container -->
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbar-content">
+                    <span class="navbar-toggler-icon"></span>
+                </button> <!-- End of Collapse -->
 
+                <!-- Nav-Links -->
+                <div class="collapse navbar-collapse" id="navbar-content">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item"><a href="#intro" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#video-section" class="nav-link">Video</a></li>
+                        <li class="nav-item"><a href="#form-section" class="nav-link">More Information</a></li>
+                    </ul>
+                </div> <!-- End of Nav-Links -->
+            </nav> <!-- End of Navbar -->
+        </header> <!-- End of Header Container -->
 
-    <!-- Embeded Responsive Media -->
-    <div class="container-fluid py-5">
-        <figure id="video">
-            <div class="embed-responsive">
-                <div class="modal embed-responsive-item" src=""></div>
-            </div>
-        </figure>
-    </div> <!-- End of Embeded Responsive Media -->
+        <div class="container py-5"></div>
 
+        <div class="container">
+            <section class="container-fluid py-5" id="intro">
+                <div class="row div">
+                    <div class="col-12 text-center">Welcome to this webpage</div>
+                </div>
+            </section>
 
+            <!-- Embeded Responsive Media -->
+            <section id="video-section" class="container-fluid py-5">
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/LKhDiZXTC4s"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </section> <!-- End of Embeded Responsive Media -->
 
+            <!-- Form -->
+            <section id="form-section" class="container py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <form action="https://www.freecodecamp.org/email-submit" id="form">
+                            <!-- Name Input -->
+                            <div class="form-group">
+                                <label class="h4" for="name-input">Name</label>
+                                <input type="text" class="form-control" id="name-input" placeholder="Enter name here..."
+                                    required>
+                            </div> <!-- End of Name Input -->
+                            <!-- Email Input -->
+                            <div class="form-group">
+                                <label class="h4" for="email-input">Email</label>
+                                <input type="email" name="email" class="form-control" id="email"
+                                    placeholder="Enter email here..." required>
+                            </div> <!-- End of Email Input-->
+                            <!-- Message Input -->
+                            <div class="form-group">
+                                <label class="h4" for="message-input">Message</label>
+                                <textarea name="message" id="message-input" class="form-control"
+                                    placeholder="Enter message here..." cols="30" rows="10"></textarea>
+                            </div> <!-- End of Message Input -->
+                            <!-- Submit Button -->
+                            <input type="submit" id="submit" value="Submit" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </section> <!-- End of Form -->
+        </div>
+
+    </main>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
